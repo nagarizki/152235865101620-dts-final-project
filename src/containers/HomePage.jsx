@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
-import {Box, Typography } from "@mui/material";
-
 import styles from "./HomePage.module.css";
+import CardMovie from "../components/CardMovie";
+import {Box, Typography } from "@mui/material";
 import {Credentials} from '../data/Credentials';
 import axios from "axios";
-import CardMovie from "../components/CardMovie";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const coin = Credentials();
@@ -38,10 +36,10 @@ const HomePage = () => {
       try {
         response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
           headers: {
-            'X-CMC_PRO_API_KEY': coin.ClientSecret,
-            "Access-Control-Allow-Origin": "https://152235865101620-dts-final-project.netlify.app/",
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Allow-Methods": "GET, POST",
+            'X-CMC_PRO_API_KEY' : coin.ClientSecret,
+            // "Access-Control-Allow-Origin": "/*",
+            // "Access-Control-Allow-Headers": "Content-Type",
+            // "Access-Control-Allow-Methods": "GET, POST",
           },
         });
       } catch(ex) {

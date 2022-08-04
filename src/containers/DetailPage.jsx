@@ -7,14 +7,14 @@ import { Box} from "@mui/material";
 // import { useAuthState } from "react-firebase-hooks/auth";
 
 import axios from "axios";
-
+import {Credentials} from '../data/Credentials';
 import CardMovieDetail from "../components/CardMovieDetail";
 
 import {useParams} from "react-router-dom";
 
 
 const DetailPage = () => {
-
+  const coin = Credentials();
   let param= useParams();
 
   const [movie, setMovie] = useState({})
@@ -46,7 +46,7 @@ new Promise(async (resolve, reject) => {
   try {
     response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
       headers: {
-        'X-CMC_PRO_API_KEY': 'a84fec87-413f-4b80-8b75-8b353204bd44',
+        'X-CMC_PRO_API_KEY' : coin.ClientSecret,
         // "Access-Control-Allow-Origin": "*",
         // "Access-Control-Allow-Headers": "Content-Type",
         // "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
