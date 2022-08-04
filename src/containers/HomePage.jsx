@@ -39,6 +39,9 @@ const HomePage = () => {
         response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
           headers: {
             'X-CMC_PRO_API_KEY': 'a84fec87-413f-4b80-8b75-8b353204bd44',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
           },
         });
       } catch(ex) {
