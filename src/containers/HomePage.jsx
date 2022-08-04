@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import {Box, Typography } from "@mui/material";
 
 import styles from "./HomePage.module.css";
-
+import {Credentials} from '../data/Credentials';
 import axios from "axios";
 import CardMovie from "../components/CardMovie";
 
 const HomePage = () => {
-
+  const coin = Credentials();
   const [movies, setMovies] = useState([])
   
 
@@ -38,7 +38,7 @@ const HomePage = () => {
       try {
         response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
           headers: {
-            'X-CMC_PRO_API_KEY': 'a84fec87-413f-4b80-8b75-8b353204bd44',
+            'X-CMC_PRO_API_KEY': coin.ClientSecret,
             "Access-Control-Allow-Origin": "https://152235865101620-dts-final-project.netlify.app/",
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "GET, POST",
