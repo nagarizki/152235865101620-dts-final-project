@@ -10,7 +10,7 @@
 .imageContainer {
   flex-grow: 3;
   background-size: auto;
-  background-image: url("../images/movieslistpp2.jpg");
+  background-image: url("../images/login-bg.jpg");
   min-width: 300px;
   min-height: 300px;
   max-width: 50%;

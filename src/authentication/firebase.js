@@ -7,12 +7,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCbGpbuczDX_4X4IEulaEpmldHpQKjwUwY",
-  authDomain: "pair-08-dts-mini-project.firebaseapp.com",
-  projectId: "pair-08-dts-mini-project",
-  storageBucket: "pair-08-dts-mini-project.appspot.com",
-  messagingSenderId: "425556890105",
-  appId: "1:425556890105:web:a14df42bc21872fb9ced28"
+  apiKey: "AIzaSyC3NU2R5vt4_TxDSwb-yviBFQ6wmbdJM3E",
+  authDomain: "dts-final-project-f89f1.firebaseapp.com",
+  projectId: "dts-final-project-f89f1",
+  storageBucket: "dts-final-project-f89f1.appspot.com",
+  messagingSenderId: "180132695612",
+  appId: "1:180132695612:web:69e2f59e2a732a225c3d39"
 };
 
 // Initialize Firebase
