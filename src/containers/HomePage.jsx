@@ -45,8 +45,8 @@ const HomePage = () => {
       } catch(ex) {
         response = null;
         // error
-        console.log(ex);
-        reject(ex);
+        // console.log(ex);
+        // reject(ex);
       }
       if (response) {
         // success
