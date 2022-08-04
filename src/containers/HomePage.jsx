@@ -34,10 +34,10 @@ const HomePage = () => {
     const indexCoin = arrIndex.join(',');
     new Promise(async (resolve, reject) => {
       try {
-        response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+        response = await axios.get('/listings/latest', {
           headers: {
             'X-CMC_PRO_API_KEY' : coin.ClientSecret,
-            // "Access-Control-Allow-Origin": "/*",
+            // "Access-Control-Allow-Origin": "localhost:3000",
             // "Access-Control-Allow-Headers": "Content-Type",
             // "Access-Control-Allow-Methods": "GET, POST",
           },
