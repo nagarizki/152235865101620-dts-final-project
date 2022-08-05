@@ -23,16 +23,16 @@ const CardMovie =({propsMovie})=> {
         <Box className="boxy" sx={{display:"flex", flexDirection:"row", alignItems:"center", margin: '2em'}}>
             <CardMedia component="img"
             sx={{width:151}}
-            image={`${urlDepanPosterpath}${propsMovie.poster_path}`}
+            image={`${urlDepanPosterpath}${propsMovie.id}`}
             alt="poster"
             ></CardMedia>
             <CardContent>
-              <Typography variant="body1">{propsMovie.title}</Typography>
+              <Typography variant="body1">{propsMovie.name}</Typography>
               <Box sx={{display: 'flex' , flexDirection: 'inline', marginBottom: '1em', textAlign: 'center'}}>
                 <Button variant='contained' sx={{marginRight: '1em'}} size='small' >Detail</Button>
-                <Rating value={propsMovie.vote_average/2} precision={0.1}/>
+                <Rating value={propsMovie.quote.USD.price}/>
               </Box>
-              <Typography variant="body1">{propsMovie.overview}</Typography>
+              <Typography variant="body1">{propsMovie.max_supply}</Typography>
               
             </CardContent>
         </Box>
