@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 module.exports = app =>{
     app.use(
         // proxy('/listings/latest',
-        createProxyMiddleware('/listings/latest',
+        createProxyMiddleware('/api/listings/latest',
         {
             target: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency',
             changeOrigin: true
